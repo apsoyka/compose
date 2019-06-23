@@ -15,7 +15,7 @@ RUN apt update \
     gpg-agent \
     apt-transport-https \
     ca-certificates \
-    software-properties-common \
+    software-properties-common
 RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
 RUN add-apt-repository \
     "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
