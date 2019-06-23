@@ -36,3 +36,5 @@ workflows:
           filters:
             tags:
               only: /s^\d+\.\d+\.\d+$/s
+            branches:
+              only: master
