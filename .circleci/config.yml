@@ -35,4 +35,4 @@ workflows:
       - publish:
           filters:
             tags:
-              only: /^\d+\.\d+\.\d+$/
+              only: /s^\d+\.\d+\.\d+$/s
