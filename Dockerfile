@@ -7,7 +7,7 @@ ENV DOCKER_COMPOSE_VERSION 1.24.0
 
 VOLUME ~/.ssh
 
-RUN apt update \
+RUN apt update && \
     apt --no-install-recommends --yes install \
     curl \
     git \
@@ -21,7 +21,7 @@ RUN add-apt-repository \
     "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
     $(lsb_release -cs) \
     stable"
-RUN apt update \
+RUN apt update && \
     apt --no-install-recommends --yes install \
     docker-ce \
     docker-ce-cli \
