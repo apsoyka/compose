@@ -20,7 +20,7 @@ jobs:
       - run:
           name: Publish
           command: |
-            docker login --username $DOCKER_HUB_USERNAME --password $DOCKER_HUB_PASSWORD
+            docker login --username $DOCKER_REGISTRY_USERNAME --password $DOCKER_REGISTRY_PASSWORD
             docker build --compress --tag compose:latest compose:$CIRCLE_TAG .
             docker push ddsoyka/compose:latest
             docker push ddsoyka/compose:$CIRCLE_TAG
