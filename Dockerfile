@@ -32,3 +32,5 @@ RUN curl -L "https://github.com/docker/compose/releases/download/${DOCKER_COMPOS
     mv /tmp/docker-compose $INSTALLATION_PATH
 
 HEALTHCHECK CMD docker-compose version | grep -Fxq $DOCKER_COMPOSE_VERSION
+
+ENTRYPOINT [ "docker-compose" ]
