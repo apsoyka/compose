@@ -2,6 +2,7 @@
 
 # Included Packages
 - Git
+- GPG
 - OpenSSH
 - Docker Engine
 - Docker Compose
