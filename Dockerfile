@@ -30,3 +30,5 @@ RUN apt update && \
 RUN curl -L "https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-$(uname -s)-$(uname -m)" > /tmp/docker-compose && \
     chmod +x /tmp/docker-compose && \
     mv /tmp/docker-compose $INSTALLATION_PATH
+
+HEALTHCHECK CMD docker-compose version | grep -Fxq $DOCKER_COMPOSE_VERSION
